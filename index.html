@@ -1,61 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<style>
-	  #song-title {
-  color: #333;
-  font-size: 36px;
-  text-align: center;
-}
+<html lang="en">
+<head>
+	<!-- Setting the pages character encoding -->
+	<meta charset="UTF-8">
 
-#song-artist {
-  color: #555;
-  font-size: 24px;
-  text-align: center;
-}
+	<!-- The meta viewport will scale my content to any device width -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	  </style>
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
-  <body>
-	<div class="container">
-	  <div class="row">
-		<div class="col-sm-12">
-		  <h2 id="song-title"></h2>
-		  <p id="song-artist"></p>
-		</div>
-	  </div>
-	  <div class="row">
-		<div class="col-sm-12">
-		  <audio controls>
-			<source src="https://server10.mp3quran.net/Aamer/001.mp3" type="audio/mpeg">
-			  Your browser does not support the audio element.
-		  </audio>
-		</div>
-	  </div>
-	</div>
-	
-	
-    <h1>My Website</h1>
+	 <!-- Link to my stylesheet -->
+	 <link rel="stylesheet" href="styles.css">
+	<title>Start up</title>
+</head>
+<body>
 
-    <p>This is my first website</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Image</th>
+				<th>Product name</th>
+				<th>Price</th>
+				<th>inventory</th>
+				<th>Product  code</th>
+			</tr>
+		</thead>
+		<tbody id="data-output">
+			<!-- Prodcuts from gavascript file in here. -->
+		</tbody>
+	</table>
 
-  </body>
-  
-  <script>
-	
-	var audio = document.querySelector('audio');
-var playBtn = document.querySelector('#play-btn');
-
-playBtn.addEventListener('click', function() {
-  if (audio.paused) {
-    audio.play();
-    playBtn.innerHTML = "Pause";
-  } else {
-    audio.pause();
-    playBtn.innerHTML = "Play";
-  }
-});
-
-	</script>
-</html>		
+	<script src="script.js"></script> <!-- Link to the javascript file -->
+</body>
+</html>
